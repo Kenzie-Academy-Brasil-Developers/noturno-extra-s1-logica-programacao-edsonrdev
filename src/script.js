@@ -1,10 +1,12 @@
 // Seu código vem aqui
 
 function calculateSalary(fixedSalary, sales) {
-   let comission = 36 // 1200 * 0.03
+   let comission;
 
    if (sales > 1200) {
-      comission += (sales - 1200) * 0.05;
+      comission = 1200 * 0.03 + (sales - 1200) * 0.05;
+   } else {
+      comission = sales * 0.03
    }
 
    return fixedSalary + comission;
